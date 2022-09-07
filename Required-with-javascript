@@ -1,0 +1,17 @@
+jQuery('button.elementor-search-form__submit')
+.click(function() {	
+
+//Add required in input field.
+	jQuery('.elementor-search-form__input').prop('required',true);
+
+
+	//Add required with return
+	 var first_name = jQuery('.elementor-search-form__input').val(); 
+	if (first_name.length < 1) {  
+	jQuery('.elementor-search-form__input').after('<span class="error">This field is required</span>');  
+	alert("Field can't be blank");  
+	return false; 
+	} 
+	else{
+	return true; 
+	}	  	
